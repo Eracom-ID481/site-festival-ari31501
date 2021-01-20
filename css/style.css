@@ -12,3 +12,151 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+body {
+  background-color: black;
+  color: #ffffff;
+  font-family: "Press Start 2P", monospace;
+}
+
+#main,
+#header,
+#footer {
+  width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header {
+  text-align: right;
+}
+
+#main {
+  min-height: 730px;
+}
+
+.listleft,
+.listright {
+  float: left;
+  margin: 5px 0px;
+}
+
+.listleft {
+  width: 90%;
+  color: #00ffff;
+}
+
+.listright {
+  width: 100%;
+  text-align: right;
+      margin-top: -20px;
+}
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #0000ff;
+  color: #ffff00;
+  margin: 12px;
+  padding: 20px 0px;
+}
+
+h3 {
+  color: #ffff00;
+}
+
+h1,
+h3,
+p {
+  line-height: 20px;
+}
+
+hr {
+  height: 6px;
+  width: 100%;
+  color: #0000ff;
+  background-color: #0000ff;
+  border: 1px solid #0000ff;
+  margin: 20px 0px;
+}
+
+#red,
+#green,
+#yellow,
+#blue {
+  width: 25%;
+  display: inline;
+  border: 0px;
+  float: left;
+  text-align: center;
+}
+
+#red {
+  color: #ff0000;
+}
+
+#green {
+  color: #00ff00;
+}
+
+#yellow {
+  color: #ffff00;
+}
+
+#blue {
+  color: #00ffff;
+}
+
+@media screen and (max-width: 850px) {
+  #header,
+  #main,
+  #footer {
+    width: 100%;
+  }
+}
+element.style {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  display: grid;
+  place-items: center;
+  width: 200px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+}
+
+.container > .text-box {
+  position: absolute;
+  top: 0;
+}
+.mymove2 {
+  animation: mymove 6s infinite;
+}
+
+.mymove {
+  animation: mymove 6s infinite;
+}
+
+@keyframes mymove {
+  0% {
+    left: 0%;
+    top: 0%;
+  }
+  50% {
+    left:-10rem;
+    top: 0%;
+  }
+  100% {
+    left: 0%;
+    top: 0%;
+  }
+
+  ::selection {
+    background-color: #f0f;
+    color: #fc0;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>test hover parent enfant v2</title>
+		<style media="screen">
+			@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
+			body { font-family: 'IBM Plex Sans', sans-serif; }
+
+			body{ margin: 4rem; }
+
+			img{ width: 100%; }
+
+			.parent{
+				width: 600px;
+				position: relative;
+			}
+
+			.enfant{
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.67);
+				color: #FFF;
+				padding: 2rem;
+				box-sizing: border-box;
+
+				position: absolute;
+				left:0;
+				top:0;
+
+				display: none; /* cacher .enfant au départ… */
+			}
+
+			.enfant h1 {
+				font-weight: 900;
+				font-size: 4rem;
+
+				/* teh supa-speshill FX, yo!*/
+				background: -webkit-linear-gradient(#FF0, #F60);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			.parent:hover .enfant {
+				display: block; /* afficher .enfant au survol du .parent */
+			}
+
+			.parent:hover img {
+
+				/* more bling! */
+				filter: blur(4px) grayscale(80%);	/* <- this may not work in all browsers… */
+				/*opacity: 0.5;*/					/* <- this would be more prudent… */
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div class="parent">
+			<img src="https://picsum.photos/600/400/" alt="">
+			<div class="enfant">
+				<h1>Title, yo!</h1>
+				<p>Information Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+
+	</body>
+</html>
